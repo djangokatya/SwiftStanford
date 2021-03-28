@@ -11,7 +11,7 @@ By Lection 2 I removed them from the working scope but they are at the bottom of
 
 # Lection 2
 I added a section where after the first matched emoju pair there appears a Textfield with the already matched emojis + a label for that (previously invisible).
-![Screenshot](https://i.imgur.com/E2wGUhh.png  =250x)
+<img src="https://i.imgur.com/E2wGUhh.png" width="200"/>
 
 *The name bigFloppa2 is based on the meme my brother and I are enamoured by at the moment and the nature of the app - it is a card flipping memory game.
 And number 2 is so because the first time I wanted to recreate Lection 1 by heart I did something horribly wrong drag'n'dropping files, so it didn't work - nothing code related, I swear.*
