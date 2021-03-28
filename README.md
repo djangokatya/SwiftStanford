@@ -1,7 +1,7 @@
 Me learning Swift/XCode with the Stanford course + YouTube translations of it made by brilliant Ivan Skorokhod.
 After each lection I am making adjustments and complicate the program so that it helps me understand the material better.
 
-*These are 2019 Lections and apparently they are MVVC based and not MVC, I will get to it later.*
+***These are 2019 Lections and apparently they are MVVC based and not MVC, I will get to it later.***
 
 ## What I did by myself:
 
@@ -11,3 +11,7 @@ By Lection 2 I removed them from the working scope but they are at the bottom of
 
 # Lection 2
 I added a section where after the first matched emoju pair there appears a Textfield with the already matched emojis + a label for that (previously invisible).
+
+
+*The name bigFloppa2 is based of the meme my brother and I are enamoured by at the moment and the nature of the app - it is a card flipping memory game.
+And number 2 is so because the first time I wanted to recreate Lection 1 by heart I did something horrible wrong drag'n'dropping files, so it didn't work - nothing code related, I swear.*
