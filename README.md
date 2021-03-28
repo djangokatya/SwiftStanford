@@ -10,7 +10,7 @@ I added two functions to make random emojis/backgrounds for the buttons but fail
 By Lection 2 I removed them from the working scope but they are at the bottom of the controller file.
 
 # Lection 2
-I added a section where after the first matched emoju pair there appears a Textfield with the already matched emojis + a label for that (previously invisible).
+I added a section where after the first matched emoju pair there appears a Textfield with the already matched emojis + a label for that (previously invisible).\
 <img src="https://i.imgur.com/E2wGUhh.png" width="200"/>
 
 *The name bigFloppa2 is based on the meme my brother and I are enamoured by at the moment and the nature of the app - it is a card flipping memory game.
