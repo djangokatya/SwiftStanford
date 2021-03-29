@@ -10,9 +10,43 @@
 import UIKit
 
 
+// Adding interface for button border manipulation found here https://stackoverflow.com/a/48470255
+@IBDesignable extension UIButton {
+
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            guard let uiColor = newValue else { return }
+            layer.borderColor = uiColor.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+}
+
 class ViewController: UIViewController {
 
-    lazy var game = ConcentrationGame(numberOfPairsOfCards: (buttonCollection.count + 1) / 2);
+    lazy var amountOfButtons = (buttonCollection.count + 1) / 2;
+    lazy var game = ConcentrationGame(numberOfPairsOfCards: amountOfButtons);
 
     func flipButton(_ emoji: String, _ button: UIButton, _ background: UIColor){
         if button.currentTitle == emoji{
@@ -31,9 +65,20 @@ class ViewController: UIViewController {
         }
     }
     
+    // made a function to generate a random list of emojis based on the amount of buttons in buttonCollection
+    func makeEmojiList(_ amount: Int) -> [String]{
+        var emojiPool = ["🐝", "🐢", "🐋", "🦑", "🐂", "🦋", "🐙", "🐣", "🪲", "🐡", "🐁", "🐃", "🦉"];
+        emojiPool.shuffle()
+        let resultingArray = Array(emojiPool[0...amount-1])
+        print("Emojis used:", resultingArray.joined(separator: ", "))
+        return resultingArray
+    }
+    
     @IBOutlet var buttonCollection: [UIButton]!
     
-    var emojiCollection = ["🐝", "🐢", "🐋", "🦑", "🐂", "🦋", "🐙", "🐣"];
+
+    
+    lazy var emojiCollection = makeEmojiList(amountOfButtons)
     var emojiDictionary = [Int:String]();
     
     func emojiIdentifier(for card: Card) -> String{
@@ -56,6 +101,9 @@ class ViewController: UIViewController {
             if card.isFaceUp{
                 button.setTitle(currentEmoji, for: .normal);  // emojiCollection[index] ???
                 button.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0);
+                button.layer.cornerRadius = 5;
+                button.layer.borderWidth = 1;
+                button.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1);
             }else{
                 button.setTitle("", for: .normal);
                 if card.isMatched == true{
@@ -72,8 +120,6 @@ class ViewController: UIViewController {
                         }
                         matchedEmojisList.text = "  " + matchedEmojis.joined(separator: " ")
                     }
-                    
-                    
                     
                 }else{
                     button.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1);
