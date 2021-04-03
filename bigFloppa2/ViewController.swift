@@ -106,24 +106,25 @@ class ViewController: UIViewController {
                 button.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1);
             }else{
                 button.setTitle("", for: .normal);
-                if card.isMatched == true{
-                    if !matchedEmojis.contains(currentEmoji){
-                        
-                        button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0);
-                        matchedEmojis.append(currentEmoji);
-                        if alreadyGuessedLabel.text! == "" {
-                            alreadyGuessedLabel.text = "Already guessed:"
-                            
-                            matchedEmojisList.layer.borderColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1);
-                            matchedEmojisList.layer.cornerRadius = 5;
-                            matchedEmojisList.layer.borderWidth = 1;
-                        }
-                        matchedEmojisList.text = "  " + matchedEmojis.joined(separator: " ")
-                    }
-                    
-                }else{
-                    button.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1);
-                }
+//                if card.isMatched == true{
+//                    if !matchedEmojis.contains(currentEmoji){
+//
+//                        button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0);
+//                        matchedEmojis.append(currentEmoji);
+//                        if alreadyGuessedLabel.text! == "" {
+//                            alreadyGuessedLabel.text = "Already guessed:"
+//
+//                            matchedEmojisList.layer.borderColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1);
+//                            matchedEmojisList.layer.cornerRadius = 5;
+//                            matchedEmojisList.layer.borderWidth = 1;
+//                        }
+//                        matchedEmojisList.text = "  " + matchedEmojis.joined(separator: " ")
+//                    }
+//
+//                }else{
+//                    button.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1);
+//                }
+                
                 // button.backgroundColor = card.isMatched ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0) : #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1);
                 
                 
