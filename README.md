@@ -1,4 +1,4 @@
-# main branch
+# *main* branch
 
 Me learning Swift/XCode with the Stanford course + YouTube translations of it made by brilliant Ivan Skorokhod.
 After each lection I am making adjustments and complicate the program so that it helps me understand the material better.
