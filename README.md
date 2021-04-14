@@ -18,3 +18,5 @@ I added a section where after the first matched emoju pair there appears a Textf
 *The name bigFloppa2 is based on the meme my brother and I are enamoured by at the moment and the nature of the app - it is a card flipping memory game.
 And number 2 is so because the first time I wanted to recreate Lection 1 by heart I did something horribly wrong drag'n'dropping files, so it didn't work - nothing code related, I swear.*
 
+# *appledev* branch
+https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html#//apple_ref/doc/uid/TP40015214-CH2-SW1
